@@ -467,9 +467,9 @@
 
 
 
-    <footer class="footer"  style="background-color: gray;">
-      <div class="footer-container" style="background-color: red;">
-          <div class="footer-links" style="background-color: green;">
+    <footer style="background-color: gray;">
+      <div class="footer-container">
+          <div class="footer-row">
             <h3>Refencias</h3>
             <ul>
               <li>1</li>
@@ -479,18 +479,50 @@
               <li>5</li>
             </ul>
           </div>
-          <div class="footer-links">
-            <h3>Botones de interes</h3>
-            <ul>
-              <li><a href="https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ?sub_confirmation=1" target="_blank">
-                <ion-icon name="logo-youtube"></ion-icon> Suscribete al canal</a></li>
-              <li><a href="../assets/trabajo-info-tema1.odt" target="_self" download>
-                <ion-icon name="cloud-download-outline"></ion-icon> Descarga el PDF </a></li>
-              <li><a href="mailto:alvarodrumer54@gmail.com?subject=Questions&body=Hola! Me gustaría hacer una pregunta respecto a esta web. " >
-                <ion-icon name="help-outline"></ion-icon> Preguntas aquí</a></li>
-                <li><a  href="mailto:alvarodrumer54@gmail.com?subject=Debug-errors&body=Hola! Me gustaría reportar un error respecto a esta página web." >
-                  <ion-icon name="bug-outline"></ion-icon> Encontraste algun error? Escribenos!</a></li>
-            </ul>
+          <div class="footer-row">         
+             <div class="footer-links">
+              <h3>Botones de interes</h3>
+              <ul>
+                <li><a href="https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ?sub_confirmation=1" target="_blank">
+                    <ion-icon name="logo-youtube"></ion-icon> Suscribete al canal</a></li>
+                <li><a href="../assets/trabajo-info-tema1.odt" target="_self" download>
+                    <ion-icon name="cloud-download-outline"></ion-icon> Descarga el PDF </a></li>
+                <li><a href="mailto:alvarodrumer54@gmail.com?subject=Questions&body=Hola! Me gustaría hacer una pregunta respecto a esta web. " >
+                    <ion-icon name="help-outline"></ion-icon> Preguntas aquí</a></li>
+                  <li><a  href="mailto:alvarodrumer54@gmail.com?subject=Debug-errors&body=Hola! Me gustaría reportar un error respecto a esta página web." >
+                      <ion-icon name="bug-outline"></ion-icon> Encontraste algun error? Escribenos!</a></li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <h3>Contacto</h3>
+            <form class="contact-form">
+              <div>
+                  <label for="nombre">Nombre <span>*</span>:</label>
+                  <input type="text" id="nombre" name="nombre" required>
+              </div>
+              <div>
+                  <label for="apellidos">Apellidos:</label>
+                  <input type="text" id="apellidos" name="apellidos">
+              </div>
+              <div>
+                  <label for="correo">Correo <span>*</span>:</label>
+                  <input type="email" id="correo" name="correo" required>
+              </div>
+              <div>
+                  <label for="notificaciones">Enviar notificaciones:</label>
+                  <input type="checkbox" id="notificaciones" name="notificaciones">
+              </div>
+              <!-- <div>
+                <div class="disclaimer-dataform">
+                  <label for="disclaimer-checkbox">
+                    <input name="disclaimer-checkbox", type="checkbox", id="disclaimer-checkbox">Estoy de acuerdo en que el contenido de este mensaje <br> no es de ningún modo spam, perjudicial o malintencionado.
+                  </label>
+                </div> -->
+              <div>
+                  <button type="submit">Enviar</button>
+              </div>
+            </form>
           </div>
       </div>
       <div class="footer-copyright-thumbnail">   
@@ -501,7 +533,8 @@
 
     <!-- Scripts -->
     <script src="app.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script> <!-- Cargamos al final los scripts por si dan fallo, que la pagina se 
+    pueda mostrar sin ellos-->
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>  <!-- https://ionic.io/ionicons -->
   </main>
   </body>
