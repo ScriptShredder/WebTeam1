@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Helvetica&family=Montserrat&family=Source+Sans+3&display=swap');
+/* Importamos dos fuentes de Google FONTS mediante la API*/
+
+
+
+ *{
+    box-sizing: border-box;
+ }
+
+ ::selection {
+    color: whitesmoke;
+    background: teal;
+}
+
+ body {
+    font-family: 'Roboto', sans-serif;
+    background-color: whitesmoke;
+    font-weight: 500;
+    line-height: 1.48;
+    letter-spacing: -.003em;
+    font-size: 20px;
+}
+
+ h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 41px;
+    line-height: 1.15;
+    letter-spacing: -.02em;
+    color: rgba(0, 0, 0, 0.8);
+    -webkit-font-smoothing: antialiased;
+}
+
+ h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 31px;
+    line-height: 1.15;
+    letter-spacing: -.02em;
+    color: rgba(0, 0, 0, 0.8);
+    -webkit-font-smoothing: antialiased;
+}
+
+ h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 22px;
+    line-height: 1.15;
+    letter-spacing: -.02em;
+    color: rgba(126, 43, 43, 0.8);
+    -webkit-font-smoothing: antialiased;
+}
+
+  h4 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 19px;
+    line-height: 1.15;
+    letter-spacing: -.0em;
+    color: rgba(0, 0, 0, 0.8);
+    -webkit-font-smoothing: antialiased;
+}
+
+ p {
+    text-align: justify;
+    justify-content: center;
+    text-justify:inter-word;
+    font-family: 'Helvetica', sans-serif; /* Source Sans 3 o Helvetica */
+    font-weight: 500;
+    font-style: normal;
+    font-size: 19px;
+    line-height: 1.15;
+    letter-spacing: -.01em;
+    color: #363636;
+    -webkit-font-smoothing: antialiased;
+} 
+  a {
+    box-shadow: none;
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid darkgray; 
+  }
+
+  a:hover {
+    color: royalblue;
+    border-bottom: 2px solid black; 
+  }
+
+  img {
+    width: 350px;
+    height: 180px;
+    border: 2px solid lightgray;
+  }
+  
+
+
+
+
+/* ----------------------------  ESTILOS PERSONALIZADOS ----------------------------------------*/
+/* Estilos para la tabla moderna */
+.prestyled-table-content--web-versions {
+    border-collapse: collapse; /*El collapse es para que las lineas no se superpongan */
+    width: 100%;
+    padding: 10px;
+}
+
+.prestyled-table-content--web-versions th, .prestyled-table-content--web-versions td {
+    padding: 10px;
+    text-align: center;
+    /* border-radius: 19px; */
+}
+
+.prestyled-table-content--web-versions th {
+    background-color: #363636;
+    color: #fff;
+    font-weight: bold;
+}
+
+.prestyled-table-content--web-versions tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.prestyled-table-content--web-versions tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+
+  .inline-list-element{
+    display: inline-;
+    margin-bottom: 5px;
+    align-items:center;
+  }
+
+  .contenedor {
+    display: flex; /* Establece el contenedor como un flex container */
+    justify-content: space-between; /* Alinea las columnas con espacio entre ellas */
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .right-embedded-source-container .left-embedded-source-container {
+    padding: 20px; /* Agrega espaciado interno para separar el contenido de las columnas */
+  }
+
+   .main-container{
+    padding: 20px 20px 20px 20px;
+   }
+
+  .content-container {
+    margin-left: 70px;
+    margin-right: 70px;
+    padding-left: 10%;
+    padding-right: 10%;
+
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Centra verticalmente el contenido */
+    padding: 10px 10px 10px 10px;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-container li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  .boton {
+    text-decoration: none;
+    color: #000; /* Cambia el color a tu elección */
+  }
+  
+  
+ 
+  /* .ol-cascade-multilevel-content{
+
+  }
+  .ul-cascade-multilevel-content{
+ 
+  } */
+
+
+  
+   /* footer {
+    text-align: center;
+    padding: 20px;
+} */
+
+/* 
+    .social-icons {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    gap: 20px;  Espaciado entre los elementos 
+} */
+
