@@ -150,8 +150,9 @@
     padding: 20px; /* Agrega espacio interno para separar el contenido de las columnas */
   }
 
-    /* Estilos generales del footer */
-    footer {
+
+  /* Estilos generales del footer */
+  footer {
     background-color: #333; /* Cambia el color de fondo a tu preferencia */
     color: #fff;
     padding: 20px;
@@ -209,7 +210,6 @@
 
 
   }
-  
   .contact-form button {
     background-color: #007BFF; 
     color: #fff;
@@ -217,6 +217,10 @@
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+  }
+
+  .contact-form button:hover{
+    background-color:#0049ff;
   }
   
   /* Estilos para los enlaces del footer */
@@ -237,7 +241,8 @@
   .footer-links a:hover {
     text-decoration: underline;
   }
-  
 
+  
+  
 
 
