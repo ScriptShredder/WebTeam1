@@ -13,6 +13,7 @@
 }
 
  body {
+    /* Dentro del app.js hay creada una funcion que redirige a un pagina de error en caso con un cumplir con el ancho minimo */
     font-family: 'Roboto', sans-serif;
     background-color: whitesmoke;
     margin: 10px;
