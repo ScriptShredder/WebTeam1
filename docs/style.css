@@ -63,28 +63,24 @@ h1,h2,h3,h4{
     letter-spacing: -.02em;
     color: var(--hcolor);
 }
- h1 {
+h1 {
     font-weight: 800;
     font-size: 41px;
 }
-
- h2 {
+h2 {
     font-weight: 600;
     font-size: 31px;
 }
-
- h3 {
+h3 {
     font-weight: 600;
     font-size: 22px;
     color: var(--h3color);
 }
-
-  h4 {
+h4 {
     font-weight: 600;
     font-size: 19px;
     letter-spacing: -.0em;
 }
-
 p {
     text-align: justify;
     justify-content: center;
@@ -98,127 +94,112 @@ p {
     color: var(--pcolor);
     -webkit-font-smoothing: antialiased;
 } 
-  a {
+a {
     box-shadow: none;
     text-decoration: none;
     color: var(--a-hover-bottom-color);
-  }
-
-  a:hover {
+}
+a:hover {
     color: var(--a-hover-color);
     border-bottom: 2px solid var(--a-hover-bottom-color); 
-  }
-
-  
-ol li::marker {
+}
+ol li::marker { /* Hacemos mas grande los numeros de las listas */
     font-size: 24px;
     color: var(--hcolor);
     margin-right: 5px;
 } 
-
 img {
     width: 350px;
     height: 180px;
     border: 2px solid var(--border1-color);
 }
-  
 
 
 
 
 /* ----------------------------  ESTILOS PERSONALIZADOS ----------------------------------------*/
-/* Estilos para la tabla moderna */
-    .prestyled-table-content--web-versions {
-        border-collapse: collapse; /*El collapse es para que las lineas no se superpongan */
-        width: 100%;
-        padding: 10px;
-    }
 
-    .prestyled-table-content--web-versions th, .prestyled-table-content--web-versions td {
-        padding: 10px;
-        text-align: center;
-        /* border-radius: 19px; */
-    }
-
-    .prestyled-table-content--web-versions th {
-        background-color: var(--th-table-color);
-        color: var(--secondary-color);
-        font-weight: bold;
-    }
-
-    .prestyled-table-content--web-versions tr:nth-child(even) {
-        background-color: var(--tr--even-color);
-    }
-
-    .prestyled-table-content--web-versions tr:nth-child(odd) {
-        background-color: var(--tr-odd-color);
-    }
-    
-    .content-container{
-        margin: 15%;
-    }
-
-  .inline-list-element{
+.content-container{
+    margin-top: 10%;
+    margin-right: 15%;
+    margin-left: 15%;
+}
+.inline-list-element{
     display: inline-;
     margin-bottom: 5px;
     align-items:center;
-  }
+}
 
-  .contenedor {
+.divided-embedded-container {
     display: flex; /* Establece el contenedor como un flex container */
     justify-content: space-between; /* Alinea las columnas con espacio entre ellas */
     flex-direction: row;
     flex-wrap: wrap;
-  }
-  
-  .right-embedded-source-container .left-embedded-source-container {
+}
+.right-embedded-source-container .left-embedded-source-container {
     padding: 20px; /* Agrega espacio interno para separar el contenido de las columnas */
-  }
+}
 
 
-  /* Estilos generales del footer */
-  footer {
+
+/* Estilos para la tabla moderna */
+.prestyled-table-content--web-versions {
+        border-collapse: collapse; /*El collapse es para que las lineas no se superpongan */
+        width: 100%;
+        padding: 10px;
+}
+.prestyled-table-content--web-versions th, .prestyled-table-content--web-versions td {
+        padding: 10px;
+        text-align: center;
+        /* border-radius: 19px; */
+}
+.prestyled-table-content--web-versions th {
+        background-color: var(--th-table-color);
+        color: var(--secondary-color);
+        font-weight: bold;
+}
+.prestyled-table-content--web-versions tr:nth-child(even) {
+        background-color: var(--tr--even-color);
+}
+.prestyled-table-content--web-versions tr:nth-child(odd) {
+        background-color: var(--tr-odd-color);
+}  
+
+footer {
     background-color: var(--footerbgcolor); 
     color: var(--secondary-color);
     padding: 20px;
     text-align: center;
-  }
-  
-  .footer-container {
+}
+.footer-container {
     width: 80%;
     margin: auto;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-  }
-  
-  .footer-row {
+}
+.footer-row {
     flex: 1;
     margin: 10px;
     padding: 20px;
     text-align: left;
-  }
-  
-  /* Estilos para el formulario de contacto */
-  .contact-form {
+}
+.contact-form {
     flex: 1;
     padding: 20px;
     margin: 10px;
     text-align: left;
-  }
-  
-  .contact-form form {
+} 
+.contact-form form {
     display: flex;
     flex-direction: column;
-  }
-  
-  .contact-form label {
+} 
+.contact-form label {
     color: var(--secondary-color);
-  }
-  
-  .contact-form input[type="text"],
-  .contact-form input[type="email"],
-  .contact-form input[type="checkbox"] {
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="checkbox"] {
     font-family: "Nunito", sans-serif;
     font-size: 18px;
     line-height: 1.15;
@@ -233,25 +214,25 @@ img {
     width: 100%; /* Ajusta el ancho al 100% del contenedor */
     padding-top: 5px;
     margin-bottom: 8px;
-  }
-  .contact-form button {
+}
+.contact-form button {
     background-color: #007BFF; 
     color: var(--secondary-color);
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-  }
+}
 
-  .contact-form button:hover{
+.contact-form button:hover{
     background-color:#0049ff;
-  }
+}
   
   /* Estilos para los enlaces del footer */
-  .footer-links ul {
+.footer-links ul {
     list-style: none;
     padding: 0;
-  }
+}
   
   .footer-links li {
     margin-bottom: 10px;
@@ -266,16 +247,15 @@ img {
     text-decoration: underline;
   }
 
-  
-  
 
-
-
+  ion-icon {
+    color: var(--hcolor);
+  }
 
 .theme-switch-container {
     position: fixed;
-    top: 10px;
-    right: 10px;
+    top: 15px;
+    right: 15px;
     display: flex;
     align-items: center;
     color: var(--secondary-color);
@@ -287,6 +267,7 @@ img {
     width: 40px; /* Ancho del interruptor ajustado */
     height: 24px; /* Altura del interruptor ajustado */
     margin-right: 10px;
+    margin-left: 10px;
 }
 .theme-switch input {
     opacity: 0;
