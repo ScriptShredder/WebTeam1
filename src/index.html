@@ -6,13 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="A educational web to learn basic information about IT"/>
     <meta name="revised" content="10/11/2023" /> <!-- Etiqueta que indica la última modificacion o revisión de la página -->
-    <base href=".\404.html">  <!-- Link base: Redirección de hipervínculos en caso de fallo -->
-    <title>Tema 1: Resumen</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Contenidos IT</title>
+    <link id="stylesheet" rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
     <main class="main-container">
       <header>
+        <div class="theme-switch-container">
+          <label class="theme-switch" for="checkbox">
+              <input type="checkbox" id="checkbox">
+              <div class="slider round"></div>
+          </label>
+          <ion-icon name="moon" aria-hidden="true"></ion-icon>
+        </div>
+
         <h2 align="center" class="center"><a name="home"></a><ion-icon name="leaf-outline"></ion-icon></h2>
       </header>
       <hr>
@@ -177,8 +184,7 @@
                     <p><strong>Interacción social: </strong> Facilitan la comunicación a través de la interconexión de personas con los mismos intereses. Ejemplos son las redes sociales como Instagram o de mensajería instantánea como WhatsApp.</p>
                   </li>
                   <li>
-                    <strong>Publicación de contenidos: </strong>
-                    <p>Integran contenidos creados en la web 2.0 a través del enlazamientos o incrustación para facilitan la difusión. Se usan páginas como blogs, wikis, infografías, etc.</p>
+                    <p><strong>Publicación de contenidos: </strong> Integran contenidos creados en la web 2.0 a través del enlazamientos o incrustación para facilitan la difusión. Se usan páginas como blogs, wikis, infografías, etc.</p>
                   </li>
                 </ul>
                </ol>
@@ -234,9 +240,9 @@
                       clasificados y usados para fines estratégicos.<br><br>
                       El big data se asocia a las cinco V, que lo diferencian de otros análisis de datos: </p> 
                       <br>               
-                      <div class = "contenedor">
+                      <div class = "divided-embedded-container">
                         <div class="left-embedded-source-container">
-                          <ul class="inline-list-element">
+                          <ul>
                             <li><strong>Volumen</strong></li>
                             <li><strong>Veracidad</strong></li>
                             <li><strong>Variedad</strong></li>
@@ -411,10 +417,7 @@
         </ol>  
       </div>
       </section>
-    
-
-
-    <footer style="background-color: gray;">
+    <footer>
       <div class="footer-container">
           <div class="footer-row">
             <h3>Refencias</h3>
@@ -456,16 +459,13 @@
                   <label for="correo">Correo electronico <span>*</span>:</label>
                   <input type="email" id="correo" name="correo" required>
               </div>
-              <div>
+              <div class="form-group">
                   <label for="notificaciones">Enviar notificaciones:</label>
                   <input type="checkbox" id="notificaciones" name="notificaciones">
               </div>
-              <!-- <div>
-                <div class="disclaimer-dataform">
-                  <label for="disclaimer-checkbox">
-                    <input name="disclaimer-checkbox", type="checkbox", id="disclaimer-checkbox">Estoy de acuerdo en que el contenido de este mensaje <br> no es de ningún modo spam, perjudicial o malintencionado.
-                  </label>
-                </div> -->
+              <div class="form-group">
+                <label for="disclaimer-checkbox">Entiendo que esto no es spam y no es información malintencionada:</label><input type="checkbox" id="notificaciones" name="disclaimer-checkbox">
+            </div>
               <div>
                   <button type="submit">Enviar</button>
               </div>
@@ -473,8 +473,7 @@
           </div>
       </div>
       <div class="footer-copyright-thumbnail">   
-        <small>© <script>document.write(new Date().getFullYear())</script> 
-        Álvaro Monllor Soler</small>
+        <small>Made with <ion-icon name="heart"></ion-icon> by Álvaro Monllor Soler © <script>document.write(new Date().getFullYear())</script></small>
       </div>
     </footer>
 

@@ -1,0 +1,289 @@
+/* Importamos dos fuentes de Google FONTS mediante la API*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Helvetica&family=Montserrat&family=Source+Sans+3&family=Nunito:wght@400&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+::selection {
+    color: #413b3b;
+    background: #9fe8df; /* Cambiado el color de fondo para mejorar la legibilidad */
+}
+
+body{
+    width: 100vw; /* Que el cuerpo ocupe toda la pantalla visible, es decir, en moviles, que se adapte */
+    font-family: 'Roboto', sans-serif;
+    background-color: #1b1d22;
+    color: #ddd; /* Cambiado el color del texto para mejorar la legibilidad */
+    margin: 10px;
+    font-weight: 500;
+    line-height: 1.48;
+    letter-spacing: -.003em;
+    font-size: 20px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+    font-weight: 800;
+    font-style: normal;
+    font-size: 41px;
+    line-height: 1.15;
+    letter-spacing: -.02em;
+    color: #ddd; /* Cambiado el color del texto */
+}
+
+h2 {
+    font-weight: 600;
+    font-style: normal;
+    font-size: 31px;
+    line-height: 1.15;
+    letter-spacing: -.02em;
+    color: rgba(255, 255, 255, 0.8); /* Cambiado el color del texto */
+}
+
+h3 {
+    font-weight: 600;
+    font-style: normal;
+    font-size: 22px;
+    line-height: 1.15;
+    letter-spacing: -.02em;
+    color: #cc972d;
+}
+
+h4 {
+    font-weight: 600;
+    font-style: normal;
+    font-size: 19px;
+    line-height: 1.15;
+    letter-spacing: -.0em;
+    color: rgba(255, 255, 255, 0.8); /* Cambiado el color del texto */
+}
+
+p {
+    text-align: justify;
+    justify-content: center;
+    text-justify: inter-word;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 19px;
+    line-height: 1.15;
+    letter-spacing: -.01em;
+    color: #bbb; /* Cambiado el color del texto para mejorar la legibilidad */
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    box-shadow: none;
+    text-decoration: none;
+    color: #ddd; /* Cambiado el color del texto */
+    border-bottom: 1px solid darkgray;
+}
+
+a:hover {
+    color: #4fa3ff; /* Cambiado el color del texto en hover */
+    border-bottom: 2px solid #ddd; /* Cambiado el color del borde en hover */
+}
+
+img {
+    width: 350px;
+    height: 180px;
+    border: 2px solid #ddd; /* Cambiado el color del borde */
+}
+
+
+.prestyled-table-content--web-versions th, .prestyled-table-content--web-versions td {
+    padding: 10px;
+    text-align: center;
+    /* border-radius: 19px; */
+}
+.prestyled-table-content--web-versions th {
+    background-color: #1a1a1a; /* Cambiado el color de fondo del encabezado de la tabla */
+    color: #ddd; /* Cambiado el color del texto en el encabezado de la tabla */
+}
+
+.prestyled-table-content--web-versions tr:nth-child(even) {
+    background-color: #2d2d2d; /* Cambiado el color de fondo para filas pares */
+}
+
+.prestyled-table-content--web-versions tr:nth-child(odd) {
+    background-color: #1e1e1e; /* Cambiado el color de fondo para filas impares */
+}
+
+.content-container{
+    margin: 15%;
+}
+
+.contenedor {
+    display: flex; /* Establece el contenedor como un flex container */
+    justify-content: space-between; /* Alinea las columnas con espacio entre ellas */
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+.inline-list-element{
+    display: inline-;
+    margin-bottom: 5px;
+    align-items:center;
+  }
+
+.right-embedded-source-container .left-embedded-source-container {
+    padding: 20px; /* Agrega espacio interno para separar el contenido de las columnas */
+  }
+
+/* Estilos generales del footer */
+footer {
+    background-color: #2d2d2d; /* Cambiado el color de fondo del pie de página */
+    color: #ddd;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+.footer-row {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    text-align: left;
+  }
+
+
+.contact-form {
+    flex: 1;
+    padding: 20px;
+    margin: 10px;
+    text-align: left;
+  }
+.contact-form {
+    background-color: #2d2d2d; /* Cambiado el color de fondo del formulario de contacto */
+}
+.contact-form label {
+    color: #ddd; /* Cambiado el color del texto de las etiquetas en el formulario */
+}
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+  }
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="checkbox"] {
+    font-family: "Nunito", sans-serif;
+    font-size: 18px;
+    line-height: 1.15;
+    -webkit-font-smoothing: antialiased; 
+    border: none;
+    box-shadow: none;
+    border-bottom: 3px solid #333; /* Cambiado el color de la línea inferior */
+    color: #ddd; /* Cambiado el color del texto de los campos de entrada */
+    background-color: transparent; /* Fondo transparente */
+    outline: none; /* Elimina el contorno al hacer clic */
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+    padding-top: 5px;
+    margin-bottom: 8px;
+}
+
+.contact-form button {
+    background-color: #0049ff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #00297a; 
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #ddd; 
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+    color: #4fa3ff;
+}
+
+
+
+
+/* Añadir más estilos según sea necesario */
+.theme-switch-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 18px; /* Tamaño del texto ajustado */
+}
+
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 40px; /* Ancho del interruptor ajustado */
+    height: 24px; /* Altura del interruptor ajustado */
+    margin-right: 10px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 12px; /* Radio de borde ajustado */
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px; 
+    width: 18px; 
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #b1780e;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(18px);
+    transform: translateX(18px);
+}

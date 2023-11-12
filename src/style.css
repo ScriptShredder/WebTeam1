@@ -1,234 +1,240 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Helvetica&family=Montserrat&family=Source+Sans+3&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Helvetica&family=Montserrat&family=Source+Sans+3&family=Nunito:wght@400&display=swap');
 /* Importamos dos fuentes de Google FONTS mediante la API*/
 
-
-
- *{
+*{
     box-sizing: border-box;
  }
 
- ::selection {
-    color: whitesmoke;
-    background: teal;
+:root{
+    --primary-color: whitesmoke;
+    --secondary-color: #fff;
+    --img-border-color: lightgray;
+    --hcolor: #000000cc;
+    --h3color: #7e2b2bcc;
+    --pcolor: #363636;
+    --selection-color: teal;
+    --footerbgcolor: #646262;
+    --th-table-color: #363636;
+    --tr-odd-color: white;
+    --tr--even-color: #f2f2f2;
+    --a-hover-color: royalblue;
+    --a-hover-bottom-color: black;
+    --cf-input-border-bottom-color: #f0f0f0;
 }
 
- body {
+body.dark{
+    --primary-color: #191921;
+    --secondary-color: #fff;
+    --img-border-color: lightgray;
+    --hcolor: #eeeeee;
+    --h3color: #cc972d;
+    --pcolor: #aaadad;
+    --selection-color: teal;
+    --footerbgcolor: #646262;
+    --th-table-color: #363636;
+    --tr-odd-color: #363636;
+    --tr--even-color: #0a0808;
+    --a-hover-color: royalblue;
+    --a-hover-bottom-color: black;
+    --cf-input-border-bottom-color: #f0f0f0;
+} 
+body {
+    margin: 10px;
     /* Dentro del app.js hay creada una funcion que redirige a un pagina de error en caso con un cumplir con el ancho minimo */
     font-family: 'Roboto', sans-serif;
-    background-color: whitesmoke;
-    margin: 10px;
     font-weight: 500;
-    line-height: 1.48;
+    background-color: var(--primary-color);
+    line-height: 1.32; /* Espacio entre lineas para el index SOLAMENTE */
     letter-spacing: -.003em;
     font-size: 20px;
+    transition: background-color 1.2s ease; /* Simplemente difumina cada vez que el background cambia */
 }
 
- h1 {
-    font-family: 'Roboto', sans-serif;
+::selection {
+    color: var(--primary-color);
+    background: var(--selection-color);
+}
+
+h1,h2,h3,h4{
+    font-family: 'Roboto', sans-serif;    
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.15;
+    letter-spacing: -.02em;
+    color: var(--hcolor);
+}
+h1 {
     font-weight: 800;
-    font-style: normal;
     font-size: 41px;
-    line-height: 1.15;
-    letter-spacing: -.02em;
-    color: rgba(0, 0, 0, 0.8);
-    -webkit-font-smoothing: antialiased;
 }
-
- h2 {
-    font-family: 'Roboto', sans-serif;
+h2 {
     font-weight: 600;
-    font-style: normal;
     font-size: 31px;
-    line-height: 1.15;
-    letter-spacing: -.02em;
-    color: rgba(0, 0, 0, 0.8);
-    -webkit-font-smoothing: antialiased;
 }
-
- h3 {
-    font-family: 'Roboto', sans-serif;
+h3 {
     font-weight: 600;
-    font-style: normal;
     font-size: 22px;
-    line-height: 1.15;
-    letter-spacing: -.02em;
-    color: rgba(126, 43, 43, 0.8);
-    -webkit-font-smoothing: antialiased;
+    color: var(--h3color);
 }
-
-  h4 {
-    font-family: 'Roboto', sans-serif;
+h4 {
     font-weight: 600;
-    font-style: normal;
     font-size: 19px;
-    line-height: 1.15;
     letter-spacing: -.0em;
-    color: rgba(0, 0, 0, 0.8);
-    -webkit-font-smoothing: antialiased;
 }
-
- p {
+p {
     text-align: justify;
     justify-content: center;
     text-justify:inter-word;
-    font-family: 'Helvetica', sans-serif; /* Source Sans 3 o Helvetica */
+    font-family: 'Source Sans 3' , sans-serif; /* Nunito, Source Sans 3 o Helvetica */
     font-weight: 500;
     font-style: normal;
     font-size: 19px;
     line-height: 1.15;
     letter-spacing: -.01em;
-    color: #363636;
+    color: var(--pcolor);
     -webkit-font-smoothing: antialiased;
 } 
-  a {
+a {
     box-shadow: none;
     text-decoration: none;
-    color: black;
-    border-bottom: 1px solid darkgray; 
-  }
+    color: var(--a-hover-bottom-color);
+}
+a:hover {
+    color: var(--a-hover-color);
+    border-bottom: 2px solid var(--a-hover-bottom-color); 
+}
 
-  a:hover {
-    color: royalblue;
-    border-bottom: 2px solid black; 
-  }
-
-  img {
+ol li::marker ol li li::marker{
+    font-family: "Helvetica", sans-serif;
+    margin-right: 5px;
+    color: var(--hcolor);
+}
+ol li::marker { /* Hacemos mas grande los numeros de las listas */
+    font-size: 24px;
+} 
+ol > li li::marker{
+    font-size: 18px;
+}
+img {
     width: 350px;
     height: 180px;
-    border: 2px solid lightgray;
-  }
-  
+    border: 2px solid var(--img-border-color);
+}
 
 
 
 
 /* ----------------------------  ESTILOS PERSONALIZADOS ----------------------------------------*/
-/* Estilos para la tabla moderna */
-    .prestyled-table-content--web-versions {
-        border-collapse: collapse; /*El collapse es para que las lineas no se superpongan */
-        width: 100%;
-        padding: 10px;
-    }
 
-    .prestyled-table-content--web-versions th, .prestyled-table-content--web-versions td {
-        padding: 10px;
-        text-align: center;
-        /* border-radius: 19px; */
-    }
+.content-container{
+    margin-top: 10%;
+    margin-right: 15%;
+    margin-left: 15%;
+}
 
-    .prestyled-table-content--web-versions th {
-        background-color: #363636;
-        color: #fff;
-        font-weight: bold;
-    }
-
-    .prestyled-table-content--web-versions tr:nth-child(even) {
-        background-color: #f2f2f2;
-    }
-
-    .prestyled-table-content--web-versions tr:nth-child(odd) {
-        background-color: #ffffff;
-    }
-    
-    .content-container{
-        margin: 15%;
-    }
-
-  .inline-list-element{
-    display: inline-;
-    margin-bottom: 5px;
-    align-items:center;
-  }
-
-  .contenedor {
+.divided-embedded-container {
     display: flex; /* Establece el contenedor como un flex container */
     justify-content: space-between; /* Alinea las columnas con espacio entre ellas */
     flex-direction: row;
     flex-wrap: wrap;
-  }
-  
-  .right-embedded-source-container .left-embedded-source-container {
+}
+.right-embedded-source-container .left-embedded-source-container {
     padding: 20px; /* Agrega espacio interno para separar el contenido de las columnas */
-  }
+}
 
 
-  /* Estilos generales del footer */
-  footer {
-    background-color: #333; /* Cambia el color de fondo a tu preferencia */
-    color: #fff;
+
+/* Estilos para la tabla moderna */
+.prestyled-table-content--web-versions {
+        border-collapse: collapse; /*El collapse es para que las lineas no se superpongan */
+        width: 100%;
+        padding: 10px;
+}
+.prestyled-table-content--web-versions th, .prestyled-table-content--web-versions td {
+        padding: 10px;
+        text-align: center;
+        /* border-radius: 19px; */
+}
+.prestyled-table-content--web-versions th {
+        background-color: var(--th-table-color);
+        color: var(--secondary-color);
+        font-weight: bold;
+}
+.prestyled-table-content--web-versions tr:nth-child(even) {
+        background-color: var(--tr--even-color);
+}
+.prestyled-table-content--web-versions tr:nth-child(odd) {
+        background-color: var(--tr-odd-color);
+}  
+
+footer {
+    background-color: var(--footerbgcolor); 
+    color: var(--secondary-color);
     padding: 20px;
     text-align: center;
-  }
-  
-  .footer-container {
+}
+.footer-container {
     width: 80%;
     margin: auto;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-  }
-  
-  .footer-row {
+}
+.footer-row {
     flex: 1;
     margin: 10px;
     padding: 20px;
     text-align: left;
-  }
-  
-  /* Estilos para el formulario de contacto */
-  .contact-form {
+}
+.contact-form {
     flex: 1;
     padding: 20px;
     margin: 10px;
     text-align: left;
-  }
-  
-  .contact-form form {
+} 
+.contact-form form {
     display: flex;
     flex-direction: column;
-  }
-  
-  .contact-form label {
-    color: #333;
-  }
-  
-  .contact-form input[type="text"],
-  .contact-form input[type="email"],
-  .contact-form input[type="checkbox"] {
-    font-family: "Roboto", sans-serif;
-    font-size: 16px;
+} 
+.contact-form label {
+    color: var(--secondary-color);
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="checkbox"] {
+    font-family: "Nunito", sans-serif;
+    font-size: 18px;
     line-height: 1.15;
     -webkit-font-smoothing: antialiased; 
-    color: whitesmoke;
+    color: var(--primary-color);
     border: none;
+    box-shadow: none;
     border-radius: 5px;
-    border-bottom: 3px solid #f0f0f0; /* Línea inferior del mismo color que el fondo */
-    background-color: transparent; /* Fondo transparente */
+    border-bottom: 3px solid var(--cf-input-border-bottom-color); 
+    background-color: transparent; 
     outline: none; /* Elimina el contorno al hacer clic */
     width: 100%; /* Ajusta el ancho al 100% del contenedor */
     padding-top: 5px;
     margin-bottom: 8px;
-
-
-  }
-  .contact-form button {
+}
+.contact-form button {
     background-color: #007BFF; 
-    color: #fff;
+    color: var(--secondary-color);
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-  }
+}
 
-  .contact-form button:hover{
+.contact-form button:hover{
     background-color:#0049ff;
-  }
+}
   
   /* Estilos para los enlaces del footer */
-  .footer-links ul {
+.footer-links ul {
     list-style: none;
     padding: 0;
-  }
+}
   
   .footer-links li {
     margin-bottom: 10px;
@@ -236,14 +242,91 @@
   
   .footer-links a {
     text-decoration: none;
-    color: #fff;
+    color: var(--secondary-color);
   }
   
   .footer-links a:hover {
     text-decoration: underline;
   }
 
+.form-group {
+    display: flex;
+    align-items: center;
+}
   
+      /* Espaciado entre el input y el checkbox */
+.form-group input,
+.form-group label {
+    margin-right: 10px;
+}
   
 
+  ion-icon {
+    color: var(--hcolor);
+  }
 
+.theme-switch-container {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    color: var(--secondary-color);
+    font-size: 18px; /* Tamaño del texto ajustado */
+}
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 40px; /* Ancho del interruptor ajustado */
+    height: 24px; /* Altura del interruptor ajustado */
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 12px; /* Radio de borde ajustado */
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px; 
+    width: 18px; 
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+input:checked + .slider {
+    background-color: #b1780e;
+}
+input:checked + .slider:before {
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(18px);
+    transform: translateX(18px);
+}
+
+
+/* Para la barra de scroll */
+::webkit-scrollbar {
+    width: 5px; /* Ancho de la barra de desplazamiento */
+  }
+
+::-webkit-scrollbar-track {
+    background-color: #ce1313; /* Color del indicador de posición */
+    border-radius: 5px; /* Borde redondeado */
+}

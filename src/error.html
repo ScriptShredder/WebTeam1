@@ -8,10 +8,18 @@
 </head>
 <body>
     <div class="error-container">
-        <h1>Error en la página</h1>
-        <p>Lo sentimos, ha ocurrido un error y la página no se puede cargar en este momento o el ancho de la página es menor al necesario para que la pagina se muestre.</p>
-        <p>Por favor, inténtalo de nuevo más tarde o expande la página.</p>
+        <h1 id="main-label">Error en la página</h1>
+        <br>
+        <br>
+        <p>Lo sentimos, ha ocurrido un error y la página no se puede cargar en este momento.</p>
+        <p>Por favor, inténtalo de nuevo más tarde o pulsa <button id="btnRedirectMainPage">aquí</button> refrescar la página.</p>
+        <p>Si no redirige, prueba a maximizar la ventana</p>
     </div>
     <script type="text/javascript" src="app.js"></script>
+    <script>
+    document.getElementById('btnRedirectMainPage').addEventListener('click', function() {
+      window.location.href = 'index.html';
+    });
+    </script>
 </body>
 </html>
