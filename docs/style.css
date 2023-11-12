@@ -124,11 +124,6 @@ img {
     margin-right: 15%;
     margin-left: 15%;
 }
-.inline-list-element{
-    display: inline-;
-    margin-bottom: 5px;
-    align-items:center;
-}
 
 .divided-embedded-container {
     display: flex; /* Establece el contenedor como un flex container */
