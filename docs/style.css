@@ -39,12 +39,12 @@ body.dark{
     --cf-input-border-bottom-color: #f0f0f0;
 } 
 body {
+    margin: 10px;
+    overflow: hidden; /* Evita cualquier desplazamiento vertical u horizontal de la página */
     /* Dentro del app.js hay creada una funcion que redirige a un pagina de error en caso con un cumplir con el ancho minimo */
     font-family: 'Roboto', sans-serif;
     background-color: var(--primary-color);
-    margin: 10px;
-    font-weight: 500;
-    line-height: 1.48;
+    line-height: 1.32; /* Espacio entre lineas para el index SOLAMENTE */
     letter-spacing: -.003em;
     font-size: 20px;
     transition: background-color 1.2s ease; /* Simplemente difumina cada vez que el background cambia */
@@ -301,5 +301,3 @@ input:checked + .slider:before {
     -ms-transform: translateX(18px);
     transform: translateX(18px);
 }
-
-
