@@ -8,7 +8,7 @@
 :root{
     --primary-color: whitesmoke;
     --secondary-color: #fff;
-    --border1-color: lightgray;
+    --img-border-color: lightgray;
     --hcolor: #000000cc;
     --h3color: #7e2b2bcc;
     --pcolor: #363636;
@@ -25,7 +25,7 @@
 body.dark{
     --primary-color: #191921;
     --secondary-color: #fff;
-    --border1-color: lightgray;
+    --img-border-color: lightgray;
     --hcolor: #eeeeee;
     --h3color: #cc972d;
     --pcolor: #aaadad;
@@ -103,15 +103,22 @@ a:hover {
     color: var(--a-hover-color);
     border-bottom: 2px solid var(--a-hover-bottom-color); 
 }
+
+ol li::marker ol li li::marker{
+    font-family: "Helvetica", sans-serif;
+    margin-right: 5px;
+    color: var(--hcolor);
+}
 ol li::marker { /* Hacemos mas grande los numeros de las listas */
     font-size: 24px;
-    color: var(--hcolor);
-    margin-right: 5px;
 } 
+ol > li li::marker{
+    font-size: 18px;
+}
 img {
     width: 350px;
     height: 180px;
-    border: 2px solid var(--border1-color);
+    border: 2px solid var(--img-border-color);
 }
 
 
@@ -242,6 +249,17 @@ footer {
     text-decoration: underline;
   }
 
+.form-group {
+    display: flex;
+    align-items: center;
+}
+  
+      /* Espaciado entre el input y el checkbox */
+.form-group input,
+.form-group label {
+    margin-right: 10px;
+}
+  
 
   ion-icon {
     color: var(--hcolor);

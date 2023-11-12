@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="A educational web to learn basic information about IT"/>
     <meta name="revised" content="10/11/2023" /> <!-- Etiqueta que indica la última modificacion o revisión de la página -->
-    <base href="./">  <!-- Link base: Redirección de hipervínculos en caso de fallo -->
-    <title>Tema 1: Resumen</title>
+    <title>Contenidos IT</title>
     <link id="stylesheet" rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
@@ -460,13 +459,12 @@
                   <label for="correo">Correo electronico <span>*</span>:</label>
                   <input type="email" id="correo" name="correo" required>
               </div>
-              <div>
+              <div class="form-group">
                   <label for="notificaciones">Enviar notificaciones:</label>
                   <input type="checkbox" id="notificaciones" name="notificaciones">
               </div>
-              <div>
-                <label for="disclaimer-checkbox">Entiendo que esto no es spam y no es información malintencionada:</label>
-                <input type="checkbox" id="notificaciones" name="disclaimer-checkbox">
+              <div class="form-group">
+                <label for="disclaimer-checkbox">Entiendo que esto no es spam y no es información malintencionada:</label><input type="checkbox" id="notificaciones" name="disclaimer-checkbox">
             </div>
               <div>
                   <button type="submit">Enviar</button>
@@ -475,8 +473,7 @@
           </div>
       </div>
       <div class="footer-copyright-thumbnail">   
-        <small>© <script>document.write(new Date().getFullYear())</script> 
-        Álvaro Monllor Soler</small>
+        <small>Made with <ion-icon name="heart"></ion-icon> by Álvaro Monllor Soler © <script>document.write(new Date().getFullYear())</script></small>
       </div>
     </footer>
 

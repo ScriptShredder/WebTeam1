@@ -11,6 +11,7 @@
 }
 
 body{
+    width: 100vw; /* Que el cuerpo ocupe toda la pantalla visible, es decir, en moviles, que se adapte */
     font-family: 'Roboto', sans-serif;
     background-color: #1b1d22;
     color: #ddd; /* Cambiado el color del texto para mejorar la legibilidad */
