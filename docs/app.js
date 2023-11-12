@@ -1,70 +1,51 @@
-/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-// particlesJS.load('particles.min.js', 'particlesjs-config.json', function() {
-//     console.log('callback - particles.js config loaded');
-//    });
+const minWidth = 600;
+const checkbox = document.getElementById('checkbox');
+const STORAGE_KEY = 'themePreference';
 
- 
-const checkbox = document.getElementById('checkbox'),
-      minWidth = 600; // Ancho mínimo 
-      currentStylesheet = document.getElementById('stylesheet');
+// Función para cambiar el tema
+function toggleTheme() {
+    const isDarkTheme = checkbox.checked;
+    document.body.classList.toggle('dark', isDarkTheme);
+    localStorage.setItem(STORAGE_KEY, isDarkTheme);
+}
 
-
+// Manejar eventos de cambio de estado del checkbox
 checkbox.addEventListener('change', () => {
-    const newStylesheet = document.createElement('link');
-    newStylesheet.rel = 'stylesheet';
-    
-    if (checkbox.checked) {
-        // Si el interruptor está activado (tema oscuro)
-        newStylesheet.href = 'style-night.css'; // Cambia a tu hoja de estilo nocturna
-    } else {
-        // Si el interruptor está desactivado (tema claro)
-        newStylesheet.href = 'style.css'; // Cambia a tu hoja de estilo claro
+    toggleTheme();
+});
+
+// Verificar el ancho de la página cuando se carga o redimensiona la ventana
+function checkWidth() {
+    const currentWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    if (currentWidth < minWidth) {
+        redirectToError("503");
     }
+}
 
-    // Agregar la nueva hoja de estilo y eliminar la anterior
-    document.head.appendChild(newStylesheet);
-    document.head.removeChild(currentStylesheet);
-    
-    currentStylesheet = newStylesheet;
-    currentStylesheet.id = 'stylesheet'; // Asignar el ID a la nueva hoja de estilo
-});
+// Redirigir a la página de error
+function redirectToError(errorcode) {
+    window.location.href = 'error.html';
+}
 
-window.addEventListener('load', function() {
-    checkWidth(); // Verifica el ancho de la página cuando se carga la ventana
-    window.addEventListener('resize', function() {
-        checkWidth()
-    });
-});
-
-
-
-// Manejar errores no gestionados y verificar el ancho de la página
-window.onerror = function (message, source, lineno, colno, error) {
-    // Mas tarde podría registrar el error, enviarlo a un servidor, etc.
-    // Redirigir a la página de error
+// Manejar errores no gestionados
+window.onerror = function () {
     redirectToError("404");
-    // Devolver true para evitar que el navegador maneje el error automáticamente
     return true;
 };
 
-function checkWidth() {
-    let currentWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-    if (currentWidth < minWidth) {
-        redirectToError("503"); 
-    }
-}
-
-function redirectToError(errorcode) {
-    // Redirigir a la página de error si no se cumple con el ancho minimo
-    window.location.href = 'error.html';
-    // document.getElementById("main-label").prepend("[" + errorcode + "] ") // // Intentar anadir un codigo de error para mejorar la comprension
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-    checkWidth(); // Verificar el ancho de la página al cargar
+// Verificar el ancho de la página al cargar y redimensionar
+window.addEventListener('resize', () => {
+    checkWidth();
+    toggleTheme();
 });
 
-
-
-
-
+// Verificar el ancho de la página al cargar
+document.addEventListener('DOMContentLoaded', () => {
+    checkWidth();
+    // Aplicar el tema inicial según la preferencia almacenada
+    const storedPreference = localStorage.getItem(STORAGE_KEY);
+    if (storedPreference !== null) {
+        checkbox.checked = storedPreference === 'true';
+        toggleTheme();
+    }
+});

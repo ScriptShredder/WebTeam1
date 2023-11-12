@@ -23,21 +23,21 @@
 }
 
 body.dark{
-    --primary-color: #1a1a1a;
+    --primary-color: #191921;
     --secondary-color: #fff;
     --border1-color: lightgray;
-    --hcolor: #ddd;
+    --hcolor: #eeeeee;
     --h3color: #cc972d;
-    --pcolor: #bbb;
+    --pcolor: #aaadad;
     --selection-color: teal;
     --footerbgcolor: #646262;
     --th-table-color: #363636;
-    --tr-odd-color: white;
-    --tr--even-color: #f2f2f2;
+    --tr-odd-color: #363636;
+    --tr--even-color: #0a0808;
     --a-hover-color: royalblue;
     --a-hover-bottom-color: black;
     --cf-input-border-bottom-color: #f0f0f0;
-}
+} 
 body {
     /* Dentro del app.js hay creada una funcion que redirige a un pagina de error en caso con un cumplir con el ancho minimo */
     font-family: 'Roboto', sans-serif;
@@ -47,6 +47,7 @@ body {
     line-height: 1.48;
     letter-spacing: -.003em;
     font-size: 20px;
+    transition: background-color 1.2s ease; /* Simplemente difumina cada vez que el background cambia */
 }
 
 ::selection {
@@ -108,11 +109,18 @@ p {
     border-bottom: 2px solid var(--a-hover-bottom-color); 
   }
 
-  img {
+  
+ol li::marker {
+    font-size: 24px;
+    color: var(--hcolor);
+    margin-right: 5px;
+} 
+
+img {
     width: 350px;
     height: 180px;
     border: 2px solid var(--border1-color);
-  }
+}
   
 
 
