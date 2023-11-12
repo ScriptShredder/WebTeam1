@@ -1,21 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Helvetica&family=Montserrat&family=Source+Sans+3&family=Nunito:wght@400&display=swap');
 /* Importamos dos fuentes de Google FONTS mediante la API*/
 
-
-
- *{
+*{
     box-sizing: border-box;
  }
 
- ::selection {
-    color: whitesmoke;
-    background: teal;
+:root{
+    --primary-color: whitesmoke;
+    --secondary-color: #fff;
+    --border1-color: lightgray;
+    --hcolor: #000000cc;
+    --h3color: #7e2b2bcc;
+    --pcolor: #363636;
+    --selection-color: teal;
+    --footerbgcolor: #646262;
+    --th-table-color: #363636;
+    --tr-odd-color: white;
+    --tr--even-color: #f2f2f2;
+    --a-hover-color: royalblue;
+    --a-hover-bottom-color: black;
+    --cf-input-border-bottom-color: #f0f0f0;
 }
 
- body {
+body.dark{
+    --primary-color: #1a1a1a;
+    --secondary-color: #fff;
+    --border1-color: lightgray;
+    --hcolor: #ddd;
+    --h3color: #cc972d;
+    --pcolor: #bbb;
+    --selection-color: teal;
+    --footerbgcolor: #646262;
+    --th-table-color: #363636;
+    --tr-odd-color: white;
+    --tr--even-color: #f2f2f2;
+    --a-hover-color: royalblue;
+    --a-hover-bottom-color: black;
+    --cf-input-border-bottom-color: #f0f0f0;
+}
+body {
     /* Dentro del app.js hay creada una funcion que redirige a un pagina de error en caso con un cumplir con el ancho minimo */
     font-family: 'Roboto', sans-serif;
-    background-color: whitesmoke;
+    background-color: var(--primary-color);
     margin: 10px;
     font-weight: 500;
     line-height: 1.48;
@@ -23,51 +49,42 @@
     font-size: 20px;
 }
 
- h1 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 800;
+::selection {
+    color: var(--primary-color);
+    background: var(--selection-color);
+}
+
+h1,h2,h3,h4{
+    font-family: 'Roboto', sans-serif;    
     font-style: normal;
-    font-size: 41px;
+    -webkit-font-smoothing: antialiased;
     line-height: 1.15;
     letter-spacing: -.02em;
-    color: rgba(0, 0, 0, 0.8);
-    -webkit-font-smoothing: antialiased;
+    color: var(--hcolor);
+}
+ h1 {
+    font-weight: 800;
+    font-size: 41px;
 }
 
  h2 {
-    font-family: 'Roboto', sans-serif;
     font-weight: 600;
-    font-style: normal;
     font-size: 31px;
-    line-height: 1.15;
-    letter-spacing: -.02em;
-    color: rgba(0, 0, 0, 0.8);
-    -webkit-font-smoothing: antialiased;
 }
 
  h3 {
-    font-family: 'Roboto', sans-serif;
     font-weight: 600;
-    font-style: normal;
     font-size: 22px;
-    line-height: 1.15;
-    letter-spacing: -.02em;
-    color: rgba(126, 43, 43, 0.8);
-    -webkit-font-smoothing: antialiased;
+    color: var(--h3color);
 }
 
   h4 {
-    font-family: 'Roboto', sans-serif;
     font-weight: 600;
-    font-style: normal;
     font-size: 19px;
-    line-height: 1.15;
     letter-spacing: -.0em;
-    color: rgba(0, 0, 0, 0.8);
-    -webkit-font-smoothing: antialiased;
 }
 
- p {
+p {
     text-align: justify;
     justify-content: center;
     text-justify:inter-word;
@@ -77,25 +94,24 @@
     font-size: 19px;
     line-height: 1.15;
     letter-spacing: -.01em;
-    color: #363636;
+    color: var(--pcolor);
     -webkit-font-smoothing: antialiased;
 } 
   a {
     box-shadow: none;
     text-decoration: none;
-    color: black;
-    border-bottom: 1px solid darkgray; 
+    color: var(--a-hover-bottom-color);
   }
 
   a:hover {
-    color: royalblue;
-    border-bottom: 2px solid black; 
+    color: var(--a-hover-color);
+    border-bottom: 2px solid var(--a-hover-bottom-color); 
   }
 
   img {
     width: 350px;
     height: 180px;
-    border: 2px solid lightgray;
+    border: 2px solid var(--border1-color);
   }
   
 
@@ -117,17 +133,17 @@
     }
 
     .prestyled-table-content--web-versions th {
-        background-color: #363636;
-        color: #fff;
+        background-color: var(--th-table-color);
+        color: var(--secondary-color);
         font-weight: bold;
     }
 
     .prestyled-table-content--web-versions tr:nth-child(even) {
-        background-color: #f2f2f2;
+        background-color: var(--tr--even-color);
     }
 
     .prestyled-table-content--web-versions tr:nth-child(odd) {
-        background-color: #ffffff;
+        background-color: var(--tr-odd-color);
     }
     
     .content-container{
@@ -154,8 +170,8 @@
 
   /* Estilos generales del footer */
   footer {
-    background-color: #646262; 
-    color: #fff;
+    background-color: var(--footerbgcolor); 
+    color: var(--secondary-color);
     padding: 20px;
     text-align: center;
   }
@@ -189,7 +205,7 @@
   }
   
   .contact-form label {
-    color: #333;
+    color: var(--secondary-color);
   }
   
   .contact-form input[type="text"],
@@ -199,21 +215,20 @@
     font-size: 18px;
     line-height: 1.15;
     -webkit-font-smoothing: antialiased; 
-    color: whitesmoke;
+    color: var(--primary-color);
     border: none;
+    box-shadow: none;
     border-radius: 5px;
-    border-bottom: 3px solid #f0f0f0; /* Línea inferior del mismo color que el fondo */
-    background-color: transparent; /* Fondo transparente */
+    border-bottom: 3px solid var(--cf-input-border-bottom-color); 
+    background-color: transparent; 
     outline: none; /* Elimina el contorno al hacer clic */
     width: 100%; /* Ajusta el ancho al 100% del contenedor */
     padding-top: 5px;
     margin-bottom: 8px;
-
-
   }
   .contact-form button {
     background-color: #007BFF; 
-    color: #fff;
+    color: var(--secondary-color);
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -236,7 +251,7 @@
   
   .footer-links a {
     text-decoration: none;
-    color: #fff;
+    color: var(--secondary-color);
   }
   
   .footer-links a:hover {
@@ -255,10 +270,9 @@
     right: 10px;
     display: flex;
     align-items: center;
-    color: #fff;
+    color: var(--secondary-color);
     font-size: 18px; /* Tamaño del texto ajustado */
 }
-
 .theme-switch {
     position: relative;
     display: inline-block;
@@ -266,13 +280,11 @@
     height: 24px; /* Altura del interruptor ajustado */
     margin-right: 10px;
 }
-
 .theme-switch input {
     opacity: 0;
     width: 0;
     height: 0;
 }
-
 .slider {
     position: absolute;
     cursor: pointer;
@@ -285,7 +297,6 @@
     -webkit-transition: .4s;
     transition: .4s;
 }
-
 .slider:before {
     position: absolute;
     content: "";
@@ -298,18 +309,13 @@
     -webkit-transition: .4s;
     transition: .4s;
 }
-
 input:checked + .slider {
     background-color: #b1780e;
 }
-
 input:checked + .slider:before {
     -webkit-transform: translateX(18px);
     -ms-transform: translateX(18px);
     transform: translateX(18px);
 }
-/* Otros estilos para el tema oscuro aquí */
 
-
-/* Otros estilos para el tema oscuro aquí */
 

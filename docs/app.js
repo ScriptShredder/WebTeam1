@@ -3,9 +3,11 @@
 //     console.log('callback - particles.js config loaded');
 //    });
 
-var minWidth = 600; // Ancho mínimo 
-const checkbox = document.getElementById('checkbox');
-let currentStylesheet = document.getElementById('stylesheet');
+ 
+const checkbox = document.getElementById('checkbox'),
+      minWidth = 600; // Ancho mínimo 
+      currentStylesheet = document.getElementById('stylesheet');
+
 
 checkbox.addEventListener('change', () => {
     const newStylesheet = document.createElement('link');
@@ -40,21 +42,22 @@ window.addEventListener('load', function() {
 window.onerror = function (message, source, lineno, colno, error) {
     // Mas tarde podría registrar el error, enviarlo a un servidor, etc.
     // Redirigir a la página de error
-    redirectToError();
+    redirectToError("404");
     // Devolver true para evitar que el navegador maneje el error automáticamente
     return true;
 };
 
 function checkWidth() {
-    var currentWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    let currentWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     if (currentWidth < minWidth) {
-        redirectToError(); 
+        redirectToError("503"); 
     }
 }
 
-function redirectToError() {
+function redirectToError(errorcode) {
     // Redirigir a la página de error si no se cumple con el ancho minimo
     window.location.href = 'error.html';
+    // document.getElementById("main-label").prepend("[" + errorcode + "] ") // // Intentar anadir un codigo de error para mejorar la comprension
 }
 
 document.addEventListener('DOMContentLoaded', function () {

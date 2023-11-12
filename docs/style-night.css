@@ -12,7 +12,7 @@
 
 body{
     font-family: 'Roboto', sans-serif;
-    background-color: #1a1a1a;
+    background-color: #1b1d22;
     color: #ddd; /* Cambiado el color del texto para mejorar la legibilidad */
     margin: 10px;
     font-weight: 500;
@@ -32,7 +32,7 @@ h1 {
     font-size: 41px;
     line-height: 1.15;
     letter-spacing: -.02em;
-    color: rgba(255, 255, 255, 0.8); /* Cambiado el color del texto */
+    color: #ddd; /* Cambiado el color del texto */
 }
 
 h2 {
@@ -50,7 +50,7 @@ h3 {
     font-size: 22px;
     line-height: 1.15;
     letter-spacing: -.02em;
-    color: rgba(192, 76, 76, 0.8);
+    color: #cc972d;
 }
 
 h4 {
@@ -183,6 +183,7 @@ footer {
     line-height: 1.15;
     -webkit-font-smoothing: antialiased; 
     border: none;
+    box-shadow: none;
     border-bottom: 3px solid #333; /* Cambiado el color de la línea inferior */
     color: #ddd; /* Cambiado el color del texto de los campos de entrada */
     background-color: transparent; /* Fondo transparente */
