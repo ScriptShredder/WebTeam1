@@ -3,60 +3,29 @@
 //     console.log('callback - particles.js config loaded');
 //    });
 
-// var minWidth = 600;
+var minWidth = 600; // Ancho mínimo 
+const checkbox = document.getElementById('checkbox');
+let currentStylesheet = document.getElementById('stylesheet');
 
-// window.addEventListener('load', function() {
-//     checkWidth(); // Verifica el ancho de la página cuando se carga la ventana
-
-//     window.addEventListener('resize', function() {
-//         checkWidth()  
-//     })
-// });
-
-// window.onerror = function (message, source, lineno, colno, error) {
-//     // Redirigir a la página de error en caso de cualquier error no gestionado o ancho de página insuficiente
-//     if (window.innerWidth < 600) { // Ajusta el valor según tu necesidad
-//         window.location.href = 'error.html';
-//     }
-
-//     // También puedes mostrar un mensaje de error en la consola del navegador
-//     console.error('Error:', message, 'en', source, 'en la línea', lineno);
+checkbox.addEventListener('change', () => {
+    const newStylesheet = document.createElement('link');
+    newStylesheet.rel = 'stylesheet';
     
-//     // Devolver true para evitar que el navegador maneje el error automáticamente
-//     return true;
-// };
+    if (checkbox.checked) {
+        // Si el interruptor está activado (tema oscuro)
+        newStylesheet.href = 'style-night.css'; // Cambia a tu hoja de estilo nocturna
+    } else {
+        // Si el interruptor está desactivado (tema claro)
+        newStylesheet.href = 'style.css'; // Cambia a tu hoja de estilo claro
+    }
 
-
-// function checkWidth() {
-//  // Ancho mínimo deseado en píxeles
-//     var currentWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-
-//     if (currentWidth < minWidth & window.location.href == "index.html") {
-//         // Si el ancho de la página es menor al mínimo, muestra un mensaje
-//         window.location.href = 'error.html';
-//     } else {
-//         checkWidth()
-//         window.location.href = 'index.html';
-//     }
-// }
-
-
-// document.addEventListener('DOMContentLoaded', function () {
-
-//     // Verificar el ancho de la página al cargar
-//     if (window.innerWidth < 600) { // Ajusta el valor según tu necesidad
-//         window.location.href = 'error.html';
-//     }
-
-//     // Verificar el ancho de la página cuando cambia el tamaño de la ventana
-//     window.addEventListener('resize', function() {
-//         // Si la ventana se expande y tiene el ancho necesario, recargar la página principal
-//         if (window.innerWidth >= 600) { // Ajusta el valor según tu necesidad
-//             window.location.href = 'index.html';
-//         }
-//     });
-// });
-
+    // Agregar la nueva hoja de estilo y eliminar la anterior
+    document.head.appendChild(newStylesheet);
+    document.head.removeChild(currentStylesheet);
+    
+    currentStylesheet = newStylesheet;
+    currentStylesheet.id = 'stylesheet'; // Asignar el ID a la nueva hoja de estilo
+});
 
 window.addEventListener('load', function() {
     checkWidth(); // Verifica el ancho de la página cuando se carga la ventana
@@ -64,18 +33,8 @@ window.addEventListener('load', function() {
         checkWidth()
     });
 });
-window.addEventListener('resize', function() {
-    // Si la ventana se expande y tiene el ancho necesario, recargar la página principal
-    var minWidth = 600; // Ajusta el valor según tu necesidad
-    var currentWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-
-    if (currentWidth >= minWidth && window.location.href.includes('error.html')) {
-        // Si se está en la página de error y la ventana cumple con el ancho, redirigir a la página principal
-        window.location.href = 'index.html';
-    }
 
 
-});
 
 // Manejar errores no gestionados y verificar el ancho de la página
 window.onerror = function (message, source, lineno, colno, error) {
@@ -87,9 +46,7 @@ window.onerror = function (message, source, lineno, colno, error) {
 };
 
 function checkWidth() {
-    var minWidth = 600; // Ancho mínimo 
     var currentWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-
     if (currentWidth < minWidth) {
         redirectToError(); 
     }
@@ -103,5 +60,8 @@ function redirectToError() {
 document.addEventListener('DOMContentLoaded', function () {
     checkWidth(); // Verificar el ancho de la página al cargar
 });
+
+
+
 
 
