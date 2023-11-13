@@ -261,8 +261,7 @@ footer {
 }
 
 .contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form input[type="checkbox"] {
+.contact-form input[type="email"]{
     font-family: "Nunito", sans-serif;
     font-size: 18px;
     line-height: 1.15;
@@ -277,6 +276,22 @@ footer {
     width: 100%;
     padding-top: 5px;
     margin-bottom: 8px;
+}
+
+.contact-form input[type="checkbox"]{
+    position: relative;
+    cursor: pointer;
+    height: 15px; /* Altura del checkbox */
+    width: 15px; /* Ancho del checkbox */
+    background-color: #fff; 
+    border: none;
+    border-radius: 5px; /* Radio de borde del checkbox */
+    transition: all 1s ease-in; /* Transición suave */
+}
+/* Estilos para el estado "checked" del checkbox */
+.contact-form input[type="checkbox"]:checked{
+    background-color: #007BFF; /* Fondo cuando está marcado */
+    border-color: #007BFF; /* Borde cuando está marcado */
 }
 
 .contact-form button {
