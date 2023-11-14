@@ -230,7 +230,7 @@
                       Algunas herramientas como Feedly, Pocket, Paper.li siguen estas fases durante el proceso: </p>
                       <ul>
                         <li>
-                          <strong>Recuperar > Filtrar > Revalorizar > Organizar > Difundir</strong>
+                          <h4>Recuperar > Filtrar > Revalorizar > Organizar > Difundir</h4>
                         </li>
                       </ul>
                   </li>
@@ -245,11 +245,11 @@
                       <div class = "divided-embedded-container">
                         <div class="left-embedded-source-container">
                           <ul>
-                            <li><strong>Volumen</strong></li>
-                            <li><strong>Veracidad</strong></li>
-                            <li><strong>Variedad</strong></li>
-                            <li><strong>Velocidad</strong></li>
-                            <li><strong>Valor de los datos</strong></li>
+                            <li><h4>Volumen</h4></li>
+                            <li><h4>Veracidad</h4></li>
+                            <li><h4>Variedad</h4></li>
+                            <li><h4>Velocidad</h4></li>
+                            <li><h4>Valor de los datos</h4></li>
                             <br>
                             <a href="../assets/imgs/big-data-image.png" title="Big Data; Imagen sobre sus características" target="_self">
                               <img align="center"	alt="(unable to show up the resource)"
@@ -461,13 +461,29 @@
                   <label for="correo">Correo electrónico <span>*</span>:</label>
                   <input type="email" id="correo" name="correo" required>
               </div>
+              <div>
+                <label for="ndate">Fecha de Nacimiento:</label>
+                <input type="date" id="ndate" name="ndate">
+              </div>
+              <div>
+                <label for="sexo">Género:</label>
+                <select id="sexo" name="sexo">
+                  <option value="" disabled selected>Selecciona tu género</option>
+                  <option value="Masculino">Masculino</option>
+                  <option value="Femenino">Femenino</option>
+                  <option value="Otro">Otro</option>
+                </select>
+              </div>
               <div class="form-group">
                   <label for="notificaciones">Enviar notificaciones:</label>
                   <input type="checkbox" id="notificaciones" name="notificaciones">
               </div>
               <div class="form-group">
                 <label for="disclaimer-checkbox">Entiendo que esto no es spam y no es información malintencionada:</label><input type="checkbox" id="notificaciones" name="disclaimer-checkbox">
-            </div>
+              </div>
+              <div>
+              </div>
+
               <div>
                   <button type="submit">Enviar</button>
               </div>

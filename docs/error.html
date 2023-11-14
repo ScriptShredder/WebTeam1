@@ -8,18 +8,33 @@
 </head>
 <body>
     <div class="error-container">
-        <h1 id="main-label">Error en la página</h1>
+        <h1 id="top_error_header">Error en la página</h1>
         <br>
         <br>
         <p>Lo sentimos, ha ocurrido un error y la página no se puede cargar en este momento.</p>
         <p>Por favor, inténtalo de nuevo más tarde o pulsa <button id="btnRedirectMainPage">aquí</button> refrescar la página.</p>
         <p>Si no redirige, prueba a maximizar la ventana</p>
     </div>
-    <script type="text/javascript" src="app.js"></script>
     <script>
-    document.getElementById('btnRedirectMainPage').addEventListener('click', function() {
-      window.location.href = 'index.html';
-    });
+      document.getElementById('btnRedirectMainPage').addEventListener('click', function() {
+        window.location.href = 'index.html';
+      });
+      </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          // Obtener el parámetro 'code' de la URL
+          let urlParams = new URLSearchParams(window.location.search); // Buscamos recursos en la dirección de la URL (subconjunto de URI)
+          let errorCode = urlParams.get('code');
+          // Actualizar el encabezado con el código de error
+          let topHeader = document.getElementById("top_error_header");
+          topHeader.innerHTML = errorCode + ". " + topHeader.innerText;
+      });
     </script>
+    <script>
+      window.addEventListener('popstate', function (event) {
+        window.location.reload()
+      })
+      </script>
+
 </body>
 </html>

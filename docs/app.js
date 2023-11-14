@@ -19,12 +19,18 @@ function checkWidth() {
     const currentWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     if (currentWidth < minWidth) {
         redirectToError("503");
+        // 503 porque el tipo de error es de servidor
     }
 }
 
-// Redirigir a la página de error
+
 function redirectToError(errorcode) {
-    window.location.href = 'error.html';
+    // Construir la URL con el código de error como parámetro
+    // Para pasar el error entre paginas, y para practicar los URIs y recursos compartidos pasamos el error como una URI
+    // que dice la dirección de manera única del parámetro
+    let errorUrl = 'error.html?code=' + encodeURIComponent(errorcode);
+    // Redirigir a la página de error
+    window.location.href = errorUrl;
 }
 
 // Manejar errores no gestionados
