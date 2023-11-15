@@ -260,7 +260,7 @@ footer {
 
 .footer-links {
     margin-bottom: 5px;
-    min-width: min-content;
+    min-width: max-content;
 }
 
 .contact-form {
