@@ -5,6 +5,8 @@
     box-sizing: border-box;
 }
 
+
+
 :root {
     --primary-color: whitesmoke; /* o #fcfcfc */
     --secondary-color: #8d8d9b;
@@ -13,20 +15,12 @@
     --color3: black;
     --color4: #f0f0f0;
     --h3color: #7e2b2bcc;
-
-
-
     --a-hover-color: royalblue;
-    --a-hover-bottom-color: black;
-    --cf-input-border-bottom-color: #f0f0f0;
-
     --th-table-color: var(--color1);
     --tr-odd-color: #ffffff;
     --tr-even-color: #f2f2f2;
-
     --img-border-color: lightgray;
     --selection-color: teal;
-
 }
 
 body.dark {
@@ -36,11 +30,8 @@ body.dark {
     --color2: #eeeeee;
     --color3: white;
     --h3color: #cc972d;
-
-
-
     --th-table-color: #020202;
-    --tr-odd-color: #363636;
+    --tr-odd-color: var(--color1);
     --tr-even-color: #0a0808;
 }
 
@@ -134,7 +125,7 @@ a {
 
 a:hover {
     color: var(--a-hover-color);
-    border-bottom: 2px solid var(--a-hover-bottom-color);
+    border-bottom: 2px solid var(--color3);
     font-size: calc(100% + 3px);
     transition: all 0.2s ease-out;
 }
@@ -406,7 +397,7 @@ footer {
     width: 18px;
     left: 3px;
     bottom: 3px;
-    background-color: white;
+    background-color: var(--primary-color);
     border-radius: 50%;
     -webkit-transition: .4s;
     transition: .4s;
