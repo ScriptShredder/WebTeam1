@@ -9,7 +9,7 @@
 
 :root {
     --primary-color: whitesmoke; /* o #fcfcfc */
-    --secondary-color: #8d8d9b;
+    --secondary-color: #444444;
     --color1: #363636;
     --color2: #282828;
     --color3: black;
@@ -230,7 +230,7 @@ img {
 
 footer {
     background-color: var(--secondary-color);
-    color: var(--color3);
+    color: var(--color4);
     padding: 20px;
     text-align: center;
     max-height: max-content;

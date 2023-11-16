@@ -453,18 +453,18 @@
           </div>
           <div>
             <h3>Contacto</h3>
-            <form class="contact-form">
+            <form action="server.php" method="post" class="contact-form">
               <div>
-                  <label for="nombre">Nombre <span>*</span>:</label>
-                  <input type="text" id="nombre" name="nombre" required>
+                  <label for="name">Nombre <span>*</span>:</label>
+                  <input type="text" id="name" name="name" required>
               </div>
               <div>
-                  <label for="apellidos">Apellidos:</label>
-                  <input type="text" id="apellidos" name="apellidos">
+                  <label for="forenames">Apellidos:</label>
+                  <input type="text" id="forenames" name="forenames">
               </div>
               <div>
-                  <label for="correo">Correo electrónico <span>*</span>:</label>
-                  <input type="email" id="correo" name="correo" required>
+                  <label for="email">Correo electrónico <span>*</span>:</label>
+                  <input type="email" id="email" name="email" required>
               </div>
               <div>
                 <label for="ndate">Fecha de Nacimiento:</label>
@@ -479,12 +479,17 @@
                   <option value="Otro">Otro</option>
                 </select>
               </div>
-              <div class="form-group">
-                  <label for="notificaciones">Enviar notificaciones:</label>
-                  <input type="checkbox" id="notificaciones" name="notificaciones">
+              <div>
+                <label for="more_info">Informacion Extra:</label>
+                <textarea placeholder="Escribe aqui alguna otra información que desees añadir" id="more_info" name="more_info"></textarea>
               </div>
               <div class="form-group">
-                <label for="disclaimer-checkbox">Entiendo que esto no es spam y no es información malintencionada:</label><input type="checkbox" id="notificaciones" name="disclaimer-checkbox">
+                  <label for="send_form_confirmation">Reenviar correo de confirmación de formulario:</label>
+                  <input type="checkbox" id="send_form_confirmation" name="send_form_confirmation">
+              </div>
+              <div class="form-group">
+                <label for="disclaimer-checkbox">Entiendo que esto no es spam y no es información malintencionada:</label>
+                <input type="checkbox" name="disclaimer-checkbox">
               </div>
               <div>
               </div>
