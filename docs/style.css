@@ -16,7 +16,6 @@
     --color4: #f0f0f0;
     --h3color: #7e2b2bcc;
     --a-hover-color: royalblue;
-    --th-table-color: var(--color1);
     --tr-odd-color: #ffffff;
     --tr-even-color: #f2f2f2;
     --img-border-color: lightgray;
@@ -30,20 +29,20 @@ body.dark {
     --color2: #eeeeee;
     --color3: white;
     --h3color: #cc972d;
-    --th-table-color: #020202;
-    --tr-odd-color: var(--color1);
+    --tr-odd-color: var(--secondary-color);
     --tr-even-color: #0a0808;
 }
 
 body {
     margin: 10px;
+    max-width: 100vmax;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     background-color: var(--primary-color);
     line-height: 1.32;
     letter-spacing: -.003em;
     font-size: 20px;
-    transition: background-color 1.2s ease;
+    transition: all 1.2s ease;
 }
 
 ::-webkit-scrollbar {
@@ -74,10 +73,10 @@ body {
 h1, h2, h3, h4 {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
-    -webkit-font-smoothing: antialiased;
     line-height: 1.15;
     letter-spacing: -.02em;
     color: var(--color2);
+    -webkit-font-smoothing: antialiased;
 }
 
 h1 {
@@ -104,9 +103,9 @@ h4 {
 }
 
 p {
-    text-align: justify;
-    justify-content: center;
-    text-justify: inter-word;
+    text-align: match-parent;
+    align-content: center;
+    align-self: auto;
     font-family: 'Source Sans 3', sans-serif;
     font-weight: 500;
     font-style: normal;
@@ -288,10 +287,24 @@ footer {
     margin-bottom: 8px;
 }
 .contact-form select{
-    border-radius: 6px !important;
+    border-radius: 6px;
+    background-color: var(--primary-color);
+    color: var(--color1);
     min-width: 170px;
     height: 25px;
     margin-left: 15px;
+}
+.contact-form textarea{
+    border-radius: 6px;
+    background-color: var(--primary-color);
+    color: var(--color1);
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    border-color: none;
+}
+.contact-form textarea:focus{
+    position: relative;
+    animation: respiracion 3s ease-in-out infinite;
 }
 
 .contact-form input[type="checkbox"]{
@@ -333,10 +346,6 @@ footer {
 
 .footer-links a {
     text-decoration: none;
-}
-
-.footer-links a:hover {
-    text-decoration: underline;
 }
 
 .form-group {
@@ -412,3 +421,19 @@ input:checked + .slider:before {
     -ms-transform: translateX(18px);
     transform: translateX(18px);
 }
+
+
+@keyframes respiracion {
+    0% {
+      border-color: #ffc107; /* Color inicial del borde */
+      box-shadow: 0 0 10px rgba(255, 193, 7, 0.6); /* Sombra inicial */
+    }
+    50% {
+      border-color: #ffc240; /* Mantiene el color a la mitad de la animación */
+      box-shadow: 0 0 20px rgba(255, 193, 7, 0); /* Sombra más suave */
+    }
+    100% {
+      border-color: #ffc790; /* Vuelve al color inicial */
+      box-shadow: 0 0 10px rgba(255, 193, 7, 0.6); /* Sombra inicial */
+    }
+  }
