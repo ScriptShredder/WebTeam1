@@ -47,7 +47,11 @@ window.addEventListener('resize', () => {
 
 // Verificar el ancho de la página al cargar
 document.addEventListener('DOMContentLoaded', () => {
-    checkWidth();
+    let anchoPantalla = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    if (anchoPantalla <= minWidth) {
+      window.location.href = 'pagina-error.html';
+    }
+    // checkWidth();
     // Aplicar el tema inicial según la preferencia almacenada
     const storedPreference = localStorage.getItem(STORAGE_KEY);
     if (storedPreference !== null) {
