@@ -49,7 +49,7 @@ window.addEventListener('resize', () => {
 document.addEventListener('DOMContentLoaded', () => {
     let anchoPantalla = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     if (anchoPantalla <= minWidth) {
-      window.location.href = 'pagina-error.html';
+      window.location.href = 'opt.html';
     }
     // checkWidth();
     // Aplicar el tema inicial según la preferencia almacenada
