@@ -352,6 +352,7 @@ footer {
 .form-group {
     display: flex;
     align-items: center;
+    padding: 5px;
 }
 
 .form-group input,

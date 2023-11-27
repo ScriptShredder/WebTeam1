@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="A educational web to learn basic information about IT"/>
+    <meta name="keywords" content="IT, Informatics, Technology, LoT">
     <meta name="revised" content="10/11/2023" /> <!-- Etiqueta que indica la última modificacion o revisión de la página -->
     <title>Contenidos IT</title>
     <link id="stylesheet" rel="stylesheet" type="text/css" href="style.css" />
@@ -244,7 +245,7 @@
                       <br>               
                       <div class = "divided-embedded-container">
                         <div class="left-embedded-source-container">
-                          <ul>
+                          <ol start="2">
                             <li><h4>Volumen</h4></li>
                             <li><h4>Veracidad</h4></li>
                             <li><h4>Variedad</h4></li>
@@ -428,13 +429,13 @@
       <div class="footer-container">
           <div class="footer-row">
             <h3>Refencias</h3>
-            <ul>
+            <ol type="A">
               <li>1</li>
               <li>2</li>
               <li>3</li>
               <li>4</li>
               <li>5</li>
-            </ul>
+            </ol>
           </div>
           <div class="footer-row">         
              <div class="footer-links">
@@ -453,7 +454,7 @@
           </div>
           <div>
             <h3>Contacto</h3>
-            <form action="server.php" method="post" class="contact-form">
+            <form action="server.php"  enctype="utf-8" method="post" class="contact-form">
               <div>
                   <label for="name">Nombre <span>*</span>:</label>
                   <input type="text" id="name" name="name" required>
@@ -480,12 +481,27 @@
                 </select>
               </div>
               <div class="form-group">
+                <label>Perfil:</label><br>
+                <input type="radio" id="profesor" name="profesor" value="Profesor">
+                <label for="profesor">Profesor</label>
+                <input type="radio" id="alumno" name="alumno" value="Alumno">
+                <label for="alumno">Alumno</label>
+              </div>
+              <div class="form-group">
+                <label for="password">Contraseña: </label>
+                <input type="password" id="password" name="password">
+              </div>
+              <div class="form-group">
                   <label for="send_form_confirmation">Reenviar correo de confirmación de formulario:</label>
                   <input type="checkbox" id="send_form_confirmation" name="send_form_confirmation">
               </div>
               <div class="form-group">
                 <label for="disclaimer-checkbox">Entiendo que esto no es spam y no es información malintencionada:</label>
                 <input type="checkbox" name="disclaimer-checkbox">
+              </div>
+              <div class="form-group">
+                <label>Aportar informacion útil</label>
+                <input type="file" accept="application/pdf" multiple>
               </div>
               <div>
                 <label for="more_info">Informacion Extra:</label>
