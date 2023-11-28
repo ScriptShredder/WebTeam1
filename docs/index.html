@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="es">
   <head>
     <meta charset="UTF-8">
@@ -81,14 +81,13 @@
               </li>
               <li>
                 <h3>Versiones del protocolo IP</h3>
-                <ul>
-                  <li><strong>IPv4</strong> <!-- el STRONG hace auto un salto de linea.-->
-                    <p>Es la primera versión del protocolo IP (1981). Es una cadena de dígitos de 32 bits que permite hasta 2^32 dispositivos. Actualmente se ha superado el límite de direcciones IPv4. Las direcciones están formadas por 4 números del 0 al 255 separados por un punto.</p>
-                  </li>
-                  <li><strong>IPv6</strong>
-                    <p>Es la cuarta versión del protocolo IP. Es una cadena de dígitos de 128 bits que permite hasta 2^128 dispositivos con direcciones formadas por 8 números en hexadecimal desde el 0 al ffff separados por dos puntos. Esta versión permite un número casi ilimitado de direcciones.</p>
-                  </li>
-                </ul>
+                <dl>
+                  <dt><strong>IPv4</strong></dt> <!-- el STRONG hace auto un salto de linea.-->
+                  <dd><p>Es la primera versión del protocolo IP (1981). Es una cadena de dígitos de 32 bits que permite hasta 2^32 dispositivos. Actualmente se ha superado el límite de direcciones IPv4. Las direcciones están formadas por 4 números del 0 al 255 separados por un punto.</p></dd>
+                  
+                  <dt><strong>IPv6</strong></dt>
+                  <dd><p>Es la cuarta versión del protocolo IP. Es una cadena de dígitos de 128 bits que permite hasta 2^128 dispositivos con direcciones formadas por 8 números en hexadecimal desde el 0 al ffff separados por dos puntos. Esta versión permite un número casi ilimitado de direcciones.</p></dd>
+                </dl>
               </li>
             </ol>
           </li>
@@ -106,6 +105,7 @@
                   <th>Ventajas</th>
                   <th>Desventajas</th>
                   <th>Año</th>
+                  <th>Integran Caché de JS</th>
     
                   <tr>
                     <td>1.0 o Estática</td>
@@ -113,13 +113,15 @@
                     <td><p>Facilidad de creación, ampliamente adoptado</p></td>
                     <td><p>Contenido no interactivo, diseño rudimentario, modificable solo por los creadores</p></td>
                     <td><p>Principios 1990</p></td>
+                    <td>❌</td>
                   </tr>
                   <tr>
-                    <td>2.0 o Social</td>
+                    <td >2.0 o Social</td>
                     <td><p>Introducción de CSS, mayor control de diseño</p></td>
                     <td><p>Diseño mas limpio, web dinámica y colaborativa</p></td>
                     <td><p>Mayor interacción y adaptabilidad, curva alta de aprendizaje</p></td>
                     <td><p>Principios 2000</p></td>
+                    <td>❌</td>
                   </tr>
                   <tr>
                     <td>3.0 o Semántica</td>
@@ -127,6 +129,7 @@
                     <td><p>Mayor dinamismo, formularios más avanzados, acceso eficiente a la información</p></td>
                     <td><p>Riesgo de vulnerabilidades de seguridad, problemas de rendimiento</p></td>
                     <td><p>2000-2003</p></td>
+                    <td rowspan="3">✅</td>
                   </tr>
                   <tr>
                     <td>4.0 o Total</td>
