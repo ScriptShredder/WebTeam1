@@ -42,7 +42,7 @@ body {
     line-height: 1.32;
     letter-spacing: -.003em;
     font-size: 20px;
-    transition: background-color 1.2s ease-out;
+    transition: background-color 1.2s ease;
 }
 
 ::-webkit-scrollbar {
@@ -109,7 +109,7 @@ p {
     font-family: 'Source Sans 3', sans-serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 19px;
+    font-size: 18px;
     line-height: 1.15;
     letter-spacing: -.01em;
     color: var(--color1);
