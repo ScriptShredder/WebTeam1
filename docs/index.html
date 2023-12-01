@@ -115,9 +115,10 @@
                     <td>❌</td>
                   </tr>
                   <tr>
-                    <td >2.0 o Social</td>
-                    <td><p>Introducción de CSS, mayor control de diseño</p></td>
-                    <td><p>Diseño mas limpio, web dinámica y colaborativa</p></td>
+                    <!-- Col spacing usado en CSS -->
+                    <td>2.0 o Social</td>
+                    <td  colspan="2" ><p>Introducción de CSS, mayor control de diseño</p></td>
+                    <!-- <td><p>Diseño mas limpio, web dinámica y colaborativa</p></td> -->
                     <td><p>Mayor interacción y adaptabilidad, curva alta de aprendizaje</p></td>
                     <td><p>Principios 2000</p></td>
                     <td>❌</td>
@@ -155,7 +156,7 @@
                   La evolución de los entornos virtuales de aprendizaje está muy condicionada por el desarrollo tecnológico pero también por los cambios en las prácticas educativas.<br>
                   La potencia de las aplicaciones del software social para la formación es enorme, sin embargo, su integración en cursos en línea resulta escasa ya que aparecen problemas metodológicos y tecnológicos.
                   <sup>
-                    <a href="http://e-spacio.uned.es/fez/view/bibliuned:revistaRied-2009-12-2-2060" title="Referencia bibliográfica" target="_blank">
+                    <a href="http://e-spacio.uned.es/fez/view/bibliuned:revistaRied-2009-12-2-2060" name="ref1" title="Referencia bibliográfica" target="_blank">
                       1 <ion-icon name="link-outline"></ion-icon>
                     </a>
                   </sup>
@@ -419,6 +420,25 @@
                     <small>Edición colaborativa en la red</small>
                   </li>
                 </ol>
+                <form action="server2.php" method="post" class="contact-form">
+                    <h3>Cálculo de ensayo Brimell <strong>HB</strong></h3>
+                    <div>
+                      <label for="f">Fuerza aplicada <strong>(kg/f)</strong><span>*</span>:</label>
+                      <input type="number" id="f" name="f"  min="1" max="1000" required>
+                    </div>
+                    <div>
+                      <label for="D">Diámetro del penetrador <strong>(mm)</strong>:</label>
+                      <input type="number" id="D" name="D" min="1" max="1000" required>
+                    </div>
+                    <div>
+                      <label for="d">Diámetro del objeto <strong>(mm)</strong><span>*</span>:</label>
+                      <input type="number" id="d" name="d" min="1" max="1000" required>
+                    </div>
+                    <!-- HB = (2f) / (pi*D*(D-sqrt(D**2-d**2))) -->
+                    <div>
+                      <button type="submit">Enviar</button>
+                    </div>
+                </form>
               </li>
             </ol>
           </li>
@@ -430,7 +450,7 @@
           <div class="footer-row">
             <h3>Refencias</h3>
             <ol type="A">
-              <li>1</li>
+              <li><a href="#ref1">1</a></li>
               <li>2</li>
               <li>3</li>
               <li>4</li>
